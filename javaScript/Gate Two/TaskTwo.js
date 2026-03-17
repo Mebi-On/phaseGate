@@ -1,5 +1,5 @@
-let listOfResults = [] 
+let temp = " "
 for (let index = 1; index < 101; index++){
-	listOfResults += index + ", "
+	temp += index + ", "
 	}
-console.log(listOfResults)
+console.log(temp)

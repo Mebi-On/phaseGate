@@ -1,7 +1,7 @@
-for (let row = 0; row < 6; row ++){
-	let listForRow = []
+for (let row = 1; row < 6; row ++){
+	let temp = ""
 		for(let column = 0; column < row; column ++){
-			listForRow += "* ";
+			temp += "* ";
 			}
-		console.log(listForRow);
+		console.log(temp);
 		}
