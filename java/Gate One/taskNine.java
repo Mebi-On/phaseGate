@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class taskNine {
+public class TaskNine {
     public static void main(String[] args){
         Scanner userInput = new Scanner(System.in);
 

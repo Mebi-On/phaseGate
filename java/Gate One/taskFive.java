@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class taskFive{
+public class TaskFive{
     public static void main(String[] args){
         Scanner userInput = new Scanner(System.in);
 	System.out.print("Enter the temperature in Celsius: ");

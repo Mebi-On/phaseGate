@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class taskFour {
+public class TaskFour {
     public static void main(String[] args){
         Scanner userInput = new Scanner(System.in);
 	System.out.print("Enter a number: ");
