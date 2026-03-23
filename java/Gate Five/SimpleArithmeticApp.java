@@ -14,7 +14,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class SimpleArithmeticApp{
 	
 	public static void main (String[] args){
@@ -34,7 +33,7 @@ public class SimpleArithmeticApp{
 				questionNumber ++;
 				System.out.printf("%d - %d = ", firstNumber, secondNumber);
 
-				while (attempts <=2 ){
+				while (attempts < 2 ){
 					int userAnswer = userInput.nextInt();
 
 					if ( userAnswer == answer ){
@@ -44,11 +43,13 @@ public class SimpleArithmeticApp{
 						break;
 					}
 					else if ( userAnswer != answer && attempts < 1){
-						System.out.print("Incorrect answer, 1 more try \n"); attempts = 2;
+						System.out.print("Incorrect answer, 1 more try \n"); 
+						attempts += 1;
 						continue;
 					}
-					else if ( userAnswer != answer && attempts <= 2){
-						System.out.print("Incorrect answer, out of trys \n"); attempts = 2;
+					else if ( userAnswer != answer && attempts < 2){
+						System.out.print("Incorrect answer, out of trys \n"); 
+						attempts += 1;
 						break;
 					}
 				}

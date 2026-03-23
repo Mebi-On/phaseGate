@@ -22,12 +22,12 @@ def is_list_a_palindrom(list_of_numbers):
 def list_of_perfect_squares(list_of_numbers):
     list_of_perfect_squares = []
     for numbers in list_of_numbers:
-        if numbers < 0:
-            continue
         val = numbers ** 0.5
         if val.is_integer() == True:
             list_of_perfect_squares += [numbers]
     return list_of_perfect_squares
+
+
 
 def list_of_non_perfect_squares(list_of_numbers):
     for index in range(len(list_of_numbers)):
@@ -35,3 +35,4 @@ def list_of_non_perfect_squares(list_of_numbers):
         if val.is_integer() != True:
             list_of_numbers[index] = -1
     return list_of_numbers
+

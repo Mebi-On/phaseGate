@@ -32,21 +32,21 @@ let numberOfQuestions = 10;
 					let userAnswer = input("Enter answer = ");
 
 					if ( userAnswer == answer ){
-						console.log("Correct answer\n");
+						console.log("Correct answer");
 						attempts = 3;
 						score ++;
 						break;
 					}
 					else if ( userAnswer != answer && attempts < 1){
-						console.log("Incorrect answer, 1 more try \n"); attempts = 2;
+						console.log("Incorrect answer, 1 more try"); attempts = 2;
 						continue;
 					}
 					else if ( userAnswer != answer && attempts <= 2){
-						console.log("Incorrect answer, out of trys \n"); attempts = 2;
+						console.log("Incorrect answer, out of trys"); attempts = 2;
 						break;
 					}
 				}
 			}
 		}
-		console.log(score + " / 10 \n");
+		console.log(score + " / 10 ");
 
