@@ -94,7 +94,7 @@ function flatten(matrix){
 }
 
 matrix = [[1,2,3], [4,5,6], [7,8,9]];
-console.log(flatten(matrix))
+process.stdout.write(flatten(matrix).toString()+ "\n")
 
 function intersectOf(array1, array2){
     let intersectElements = [];
