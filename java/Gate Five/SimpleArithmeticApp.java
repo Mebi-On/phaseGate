@@ -34,11 +34,11 @@ public class SimpleArithmeticApp{
 				System.out.printf("%d - %d = ", firstNumber, secondNumber);
 
 				while (attempts < 2 ){
-					int userAnswer = userInput.nextInt();
+					if (userInput.hasNextInt()){
+						int userAnswer = userInput.nextInt();
 
 					if ( userAnswer == answer ){
 						System.out.print("Correct answer\n");
-						attempts = 3;
 						score ++;
 						break;
 					}
@@ -52,6 +52,11 @@ public class SimpleArithmeticApp{
 						attempts += 1;
 						break;
 					}
+					}
+				else{		
+					System.out.print("Incorrect answer");
+					userInput.next();
+				}
 				}
 			}
 		}
