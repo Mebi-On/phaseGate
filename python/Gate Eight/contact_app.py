@@ -1,7 +1,5 @@
 contacts = [["John", "John", "Dera", "Jane"],["Doe", "Smith", "Oko", "Doe"],["08012345678", "09087654321", "08032145678", "07011112222"]]
 
-
-
 def valid_phone_number(contact_number):
     isValid = True
     for first_list_index in range(len(contacts)):
@@ -31,17 +29,24 @@ def find_contact_number(contact_number):
 
 def print_contact_info_from_number(contact_number):
     second_list_index = find_contact_number(contact_number)
-    for first_list_index in range(len(contacts)- 1):
-        print(contacts[first_list_index][second_list_index], end= " ")
-    print("\n" + contact_number)
+    if second_list_index != None:
+        for first_list_index in range(len(contacts)- 1):
+            print(contacts[first_list_index][second_list_index], end= " ")
+        return ("\n" + contact_number)
+    else:
+        return "Number not in contacts"
 
 
 def print_contact_info_from_name(contact_name):
     all_contacts_with_name = find_contact_name(contact_name)
-    for contacts_index in all_contacts_with_name:
-        for first_list_index in range(len(contacts)):
-            print(contacts[first_list_index][contacts_index], end= " ")
-        print()
+    if all_contacts_with_name != []:
+        for contacts_index in all_contacts_with_name:
+            for first_list_index in range(len(contacts)):
+                print(contacts[first_list_index][contacts_index], end= " ")
+            print()
+        return len(all_contacts_with_name)
+    else:
+        return ("Name not in contacts")
  
 
 def get_contact_info():
@@ -53,9 +58,9 @@ def get_contact_info():
     while (checking_if_number_valid):
         contact_number = input("Enter Phone Number: ")
         if valid_phone_number(contact_number) == True:
-            checking_if_number_valid = False
+            break
         else:
-            print("Phone number already in contacts. Try Again")
+            print("Phone number already in contacts or Too short. Try Again")
     new_contact_info_list = [first_name, last_name, contact_number]
     return new_contact_info_list
 
@@ -69,16 +74,17 @@ def add_new_contact(new_contact_info_list):
     
 def remove_contact(contact_number):
     contact_index = find_contact_number(contact_number)
-    if (valid_phone_number(contact_number) == False):
-        for first_list_index in range(len(contacts)):
-            contacts[first_list_index].pop(contact_index)
-        return contacts
+    if contact_index != None:
+        if (valid_phone_number(contact_number) == False):
+            for first_list_index in range(len(contacts)):
+                contacts[first_list_index].pop(contact_index)
+                return contacts
+    else:
+        return "Number not in contacts"
 
 
-
-
-
-
+#def edit_contact_information(contact_number, option_selected):
+ #   if option_selected
 
 
 
